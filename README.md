@@ -7,12 +7,14 @@ Welcome to **ProphecyJimpsons** – an innovative platform that turns future pre
 
 ## 📜 Table of Contents
 
-- [Project Overview](#📘 project-overview)
-- [Tech Stack](#🛠️ tech-stack)
-- [Getting Started](#🚀 getting-started)
-- [Features](#✨ features)
-- [Usage Guide](#🧭 usage-guide)
-- [Community and Support](#🌐 community-and-support)
+- [Project Overview](#-project-overview)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#-getting-started)
+- [Features](#-features)
+- [Usage Guide](#-usage-guide)
+- [Community and Support](#-community-and-support)
+- [License](#-license)
+- [Contributing](#-contributing)
 
 ---
 
@@ -27,7 +29,9 @@ ProphecyJimpsons is a decentralized platform on the Solana blockchain (with addi
 
 ---
 
-## 🛠️ Tech Stack
+<h2 id="tech-stack">
+🛠️ Tech Stack
+</h2>
 
 - **Blockchain**: Solana, with support for Ethereum-based chains, StarkNet, and Base.
 - **Frontend**: React, TypeScript
