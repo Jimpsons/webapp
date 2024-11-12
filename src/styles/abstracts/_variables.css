@@ -1,0 +1,13 @@
+:root {
+  /* Breakpoints */
+  --breakpoint-sm: 640px; /* Small devices */
+  --breakpoint-md: 768px; /* Medium devices */
+  --breakpoint-lg: 1024px; /* Large devices */
+  --breakpoint-xl: 1280px; /* Extra large */
+
+  /* Colors */
+  --color-primary: #3b82f6;
+  --color-secondary: #6b7280;
+  --color-background: #ffffff;
+  --color-text: #111827;
+}

@@ -1,1 +1,1 @@
-// Types for API response 
+// Types for API response

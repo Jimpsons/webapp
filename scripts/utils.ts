@@ -1,1 +1,1 @@
-// Helper utilities for scripts 
+// Helper utilities for scripts

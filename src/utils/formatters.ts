@@ -1,1 +1,1 @@
-// Formatiing utility functions 
+// Formatiing utility functions

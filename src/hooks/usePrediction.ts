@@ -1,1 +1,1 @@
-// Hook for managing predictions 
+// Hook for managing predictions

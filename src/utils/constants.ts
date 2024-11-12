@@ -1,1 +1,1 @@
-// Application-wide constant 
+// Application-wide constant

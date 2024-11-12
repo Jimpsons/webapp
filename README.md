@@ -1,4 +1,3 @@
-
 # 🔮 ProphecyJimpsons
 
 Welcome to **ProphecyJimpsons** – an innovative platform that turns future predictions into NFTs! Leveraging the power of blockchain, AI-generated imagery, and community-driven governance, ProphecyJimpsons allows users to make, verify, and trade predictive NFTs across multiple networks. Let's dive into the world of blockchain oracles and predictive assets! 🌐✨

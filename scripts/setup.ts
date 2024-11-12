@@ -1,1 +1,1 @@
-// Example setup script 
+// Example setup script
