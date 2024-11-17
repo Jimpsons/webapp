@@ -35,6 +35,7 @@
       "@types/*": ["src/types/*"],
       "@store/*": ["src/store/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
       "@lib/*": ["src/lib/*"],
       "@config/*": ["src/config/*"]
     }

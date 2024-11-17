@@ -1,13 +1,12 @@
+import { BrowserRouter } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import "./styles/index.css";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Landing />
-      <h1>Prophecy Jimpsons</h1>
-      <div className="container container-sm">hi</div>
-    </>
+    </BrowserRouter>
   );
 }
 
