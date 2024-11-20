@@ -1,13 +1,8 @@
-import { BrowserRouter } from "react-router-dom";
-import Landing from "./pages/Landing/Landing";
+import RouterProvider from "@/app/routes/RouterProvider";
 import "./styles/index.css";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Landing />
-    </BrowserRouter>
-  );
+  return <RouterProvider />;
 }
 
 export default App;

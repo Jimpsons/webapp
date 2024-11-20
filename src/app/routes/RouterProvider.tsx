@@ -2,22 +2,46 @@ import { FC } from "react";
 import {
   createBrowserRouter,
   RouterProvider as ReactRouterProvider,
+  Navigate,
 } from "react-router-dom";
 import { publicRoutes, protectedRoutes } from "./routes";
 import PrivateRoute from "./PrivateRoute";
+import DashBoardLayout from "@/layouts/DashboardLayout/DashboardLayout";
+import PATHS from "./paths";
+// import useWallet from "@/hooks/useWallet";
 
-const router = createBrowserRouter([
-  // Public routes don't need protection
-  ...publicRoutes,
+const RouterProvider: FC = () => {
+  // const { isConnected } = useWallet();
 
-  // Wrapping protected routes in PrivateRoute component
-  {
-    element: <PrivateRoute children={<h1>Private Route Compoenent</h1>} />,
-    children: protectedRoutes,
-  },
-]);
+  const router = createBrowserRouter(
+    [
+      ...publicRoutes,
+      {
+        element: (
+          <PrivateRoute>
+            <DashBoardLayout />
+          </PrivateRoute>
+        ),
+        children: protectedRoutes,
+      },
+      // Catch 404 error and if no routes found, redirect to landing page (later change it to 404 page).
+      {
+        path: "*",
+        element: <Navigate to={PATHS.PUBLIC.LANDING} replace />,
+      },
+    ],
+    {
+      future: {
+        v7_normalizeFormMethod: true,
+        v7_partialHydration: true,
+        v7_fetcherPersist: true,
+        v7_relativeSplatPath: true,
+        v7_skipActionErrorRevalidation: true,
+      },
+    },
+  );
 
-// Router Provider component
-export const RouterProvider: FC = () => {
   return <ReactRouterProvider router={router} />;
 };
+
+export default RouterProvider;

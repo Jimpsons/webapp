@@ -1,37 +1,63 @@
-import { RouteObject } from "react-router-dom";
+/* eslint-disable react-refresh/only-export-components */
+import { lazy, Suspense } from "react";
 import PATHS from "./paths";
-import MainLayout from "@layouts/MainLayout/MainLayout";
-import Landing from "@pages/Landing/Landing";
+import { RouteConfig } from "./types";
+
+// Lazy loading components for better performance
+const Landing = lazy(() => import("@/pages/Landing/Landing"));
+const Marketplace = lazy(() => import("@/pages/Marketplace/Marketplace"));
+const Dashboard = lazy(() => import("@/pages/Dashboard/Dashboard"));
+
+// Layout components should be eager laoded
+import MainLayout from "@/layouts/MainLayout/MainLayout";
+import DashBoardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 
 // Public Routes - No authentication needed
-export const publicRoutes: RouteObject[] = [
+export const publicRoutes: RouteConfig[] = [
   {
-    path: PATHS.LANDING,
+    path: PATHS.PUBLIC.LANDING,
     element: <MainLayout />,
-    errorElement: <h1>Error Page</h1>,
+    errorElement: <h1>Error Page</h1>, // replace with <ErrorBoundary/>
     children: [
       {
         index: true,
-        element: <Landing />,
+        element: (
+          // replace with <LoadingSpinner/>
+          <Suspense fallback={<h1>Loading Spinner</h1>}>
+            <Landing />
+          </Suspense>
+        ),
       },
       {
-        path: PATHS.MARKETPLACE,
-        element: <h1>Market Page</h1>,
+        path: PATHS.PUBLIC.MARKETPLACE,
+        element: (
+          <Suspense fallback={<h1>LoadingSpinner</h1>}>
+            <Marketplace />
+          </Suspense>
+        ),
       },
     ],
   },
 ];
 
 // Protected Routes - Require wallet connections
-export const protectedRoutes: RouteObject[] = [
+export const protectedRoutes: RouteConfig[] = [
   {
-    path: PATHS.DASHBOARD,
-    element: <h1>Dashboard Page</h1>,
-    errorElement: <h1>Error Page</h1>,
+    path: PATHS.PROTECTED.DASHBOARD,
+    element: <DashBoardLayout />,
+    errorElement: <h1>Error Page</h1>, // replace with <ErrorBoundary/>
     children: [
       {
         index: true,
-        element: <h1>Dashboard Page</h1>,
+        element: (
+          <Suspense fallback={<h1>LoadingSpinner</h1>}>
+            <Dashboard />
+          </Suspense>
+        ),
+        loader: async () => {
+          // Fetch initial dashboard data
+          // return fetchDashBoardData();
+        },
       },
     ],
   },

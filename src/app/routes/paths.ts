@@ -1,18 +1,20 @@
 const PATHS = {
   // Public routes (accessible without wallet connection)
-  LANDING: "/",
-  MARKETPLACE: "/marketplace",
+  PUBLIC: {
+    LANDING: "/",
+    MARKETPLACE: "/marketplace",
+    CONNECT_WALLET: "/connect-wallet",
+  },
 
-  // Auth routes
-  CONNECT_WALLET: "/connect-wallet",
-
-  // Protected routes (require waallet connection)
-  DASHBOARD: "/dashboard",
-  PREDICTIONS: "/predictions",
-  CREATE_PREDICTION: "/predictions/create",
-  NFT: "/nft",
-  CREATE_NFT: "/nft/create",
-  PROFILE: "/profile",
+  // Protected routes (require wallet connection)
+  PROTECTED: {
+    DASHBOARD: "/dashboard",
+    PREDICTIONS: "/predictions",
+    CREATE_PREDICTION: "/predictions/create",
+    NFT: "/nft",
+    CREATE_NFT: "/nft/create",
+    PROFILE: "/profile",
+  },
 };
 
 export default PATHS;
