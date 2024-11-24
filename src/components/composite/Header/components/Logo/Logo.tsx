@@ -5,7 +5,7 @@ import styles from "./Logo.module.css";
 
 const Logo: FC = () => {
   return (
-    <Link to="/someotherplace" className={styles.logo}>
+    <Link to="/" className={styles.logo}>
       <img
         src={LogoImage}
         alt="Prophecy Jimpsons"

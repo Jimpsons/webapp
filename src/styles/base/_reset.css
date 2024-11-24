@@ -58,3 +58,8 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/* unorder lists  */
+ul {
+  padding: 0;
+}
