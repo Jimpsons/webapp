@@ -1,6 +1,6 @@
 .headerWrapper {
   padding: var(--space-3);
-  border-bottom: 1px solid var(--color-dark-grey);
+  border-bottom: 1px solid var(--color-thin-grey);
   background: var(--color-black-background);
 }
 
