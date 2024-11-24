@@ -9,16 +9,17 @@ const App = lazy(() => import("@/pages/App/App"));
 const Marketplace = lazy(() => import("@/pages/Marketplace/Marketplace"));
 const RoadMap = lazy(() => import("@/pages/Roadmap/Roadmap"));
 const Dashboard = lazy(() => import("@/pages/Dashboard/Dashboard"));
+const NotFound = lazy(() => import("@/pages/NotFound/NotFound"));
 
 // Layout components should be eager laoded
-import MainLayout from "@/layouts/MainLayout/MainLayout";
+// import MainLayout from "@/layouts/MainLayout/MainLayout";
 import DashBoardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 
 // Public Routes - No authentication needed
 export const publicRoutes: RouteConfig[] = [
   {
     path: PATHS.PUBLIC.LANDING,
-    element: <MainLayout />,
+    // element: <MainLayout />,
     errorElement: <h1>Error Page</h1>, // replace with <ErrorBoundary/>
     children: [
       {
@@ -51,6 +52,14 @@ export const publicRoutes: RouteConfig[] = [
         element: (
           <Suspense fallback={<h1>LoadingSpinner</h1>}>
             <RoadMap />
+          </Suspense>
+        ),
+      },
+      {
+        path: PATHS.PUBLIC.NOTFOUND,
+        element: (
+          <Suspense fallback={<h1>LoadingSpinner</h1>}>
+            <NotFound />
           </Suspense>
         ),
       },

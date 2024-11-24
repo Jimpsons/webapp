@@ -2,6 +2,7 @@ const PATHS = {
   // Public routes (accessible without wallet connection)
   PUBLIC: {
     LANDING: "/",
+    NOTFOUND:"/not-found",
     APP: "/app",
     MARKETPLACE: "/marketplace",
     ROADMAP: "/roadmap",
