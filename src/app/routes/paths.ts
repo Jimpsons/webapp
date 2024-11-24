@@ -7,6 +7,7 @@ const PATHS = {
     ROADMAP: "/roadmap",
     BLOG: "/blog",
     CONNECT_WALLET: "/connect-wallet",
+    WHITEPAPER: "/whitepaper",
   },
 
   // Protected routes (require wallet connection)
