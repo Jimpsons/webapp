@@ -68,7 +68,7 @@
 }
 
 .footerDivider {
-  border: 1px solid var(--color-dark-grey);
+  border: 1px solid var(--color-thin-grey);
   margin: var(--space-6) auto;
   max-width: var(--container-xl);
 }
