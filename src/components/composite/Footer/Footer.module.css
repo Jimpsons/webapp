@@ -24,12 +24,12 @@
   align-items: center;
 
   img {
-    width: 180px;
+    width: 18rem;
   }
 
   @media (max-width: 640px) {
     img {
-      width: 150px;
+      width: 15rem;
     }
   }
 }
