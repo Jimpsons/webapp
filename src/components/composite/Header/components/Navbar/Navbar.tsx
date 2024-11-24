@@ -6,7 +6,6 @@ import styles from "./navbar.module.css";
 const Navbar: FC = () => {
   const location = useLocation();
   const isActive = (path: string) => {
-    console.log(location.pathname);
     if (path === "/") {
       return location.pathname === path;
     }
