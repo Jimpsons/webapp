@@ -1,4 +1,16 @@
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .logoImage {
   height: 4rem;
   width: auto;
+}
+
+@media (max-width: 76.8rem) {
+  .logoImage {
+    height: 3.2rem;
+  }
 }
