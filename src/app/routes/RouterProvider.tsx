@@ -24,10 +24,10 @@ const RouterProvider: FC = () => {
         ),
         children: protectedRoutes,
       },
-      // Catch 404 error and if no routes found, redirect to landing page (later change it to 404 page).
+      // Catch 404 error and if no routes found, redirect to not found 404 page.
       {
         path: "*",
-        element: <Navigate to={PATHS.PUBLIC.LANDING} replace />,
+        element: <Navigate to={PATHS.PUBLIC.NOTFOUND} replace />,
       },
     ],
     {
