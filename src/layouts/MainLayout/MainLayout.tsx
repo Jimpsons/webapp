@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Header } from "@/components/composite/Header";
 import Hero from "@/components/composite/Hero";
+import { Footer } from "@/components/composite/Footer";
 
 const MainLayout: FC = () => {
   return (
@@ -9,6 +10,7 @@ const MainLayout: FC = () => {
       <main>
         <Hero />
       </main>
+      <Footer />
     </div>
   );
 };

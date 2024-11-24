@@ -7,6 +7,10 @@ const PATHS = {
     ROADMAP: "/roadmap",
     BLOG: "/blog",
     CONNECT_WALLET: "/connect-wallet",
+
+    // Need to add component
+    PRIVACY_POLICY: "/privacy-policy",
+    TERMS_OF_SERVICE: "/terms-of-service",
     WHITEPAPER: "/whitepaper",
   },
 
