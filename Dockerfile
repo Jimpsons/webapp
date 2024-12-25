@@ -4,30 +4,24 @@ FROM node:18-alpine as builder
 # Set working directory
 WORKDIR /app
 
-# Install dependencies first
+# Install dependencies using apk
 RUN apk add --no-cache \
     python3 \
     make \
     g++ \
     git
 
-# Install yarn globally
-RUN npm install -g yarn
-
 # Copy package files
 COPY package.json yarn.lock ./
 
-# Clear yarn cache and verify yarn installation
+# Clear yarn cache and install dependencies
 RUN yarn cache clean && \
-    yarn --version
-
-# Install dependencies with legacy peer deps flag
-RUN yarn install --network-timeout 1000000
+    yarn install --frozen-lockfile --network-timeout 1000000
 
 # Copy source files
 COPY . .
 
-# Build with additional memory allocation
+# Build with increased memory allocation
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN yarn build
 
